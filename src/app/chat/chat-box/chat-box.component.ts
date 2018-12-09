@@ -1,9 +1,8 @@
-import { Component, OnInit , ViewContainerRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SocketService } from 'src/app/socket.service';
 
 import { Router } from '@angular/router';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
-import { ToastrService } from 'ngx-toastr';
 import { AppService } from 'src/app/app.service';
 
 
@@ -26,17 +25,16 @@ export class ChatBoxComponent implements OnInit {
   constructor(public AppService: AppService,
     public SocketService: SocketService,
     public router: Router,
-    private toastr: ToastrService,
     ) {
 
       this.receiverId = Cookie.get('receiverId');
 
       this.receiverName = Cookie.get('receiverName');
-
-      //this.toastr.setRootViewContainerRef(vcr);
      }
 
-  ngOnInit() {this.authToken = Cookie.get('authtoken');
+  ngOnInit() {
+    
+  this.authToken = Cookie.get('authtoken');
 
   this.userInfo = this.AppService.getUserInfofromLocalStorage();
 
