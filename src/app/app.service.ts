@@ -40,6 +40,7 @@ export class AppService {
     }  // end of signup function
 
     public signinFunction(data): Observable<any>  {
+      
 
       const params = new  HttpParams()
         .set('email', data.email)
