@@ -5,7 +5,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
-import { ChatModule } from './chat/chat.module';
+//import { ChatModule } from './chat/chat.module';
 import { UserModule } from './user/user.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +22,6 @@ import { AppService } from './app.service';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ChatModule,
     UserModule,
     FormsModule,
     ToastrModule.forRoot(),

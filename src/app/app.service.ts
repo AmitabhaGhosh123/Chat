@@ -6,6 +6,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/toPromise';
 import { HttpClient} from '@angular/common/http';
 import { HttpErrorResponse, HttpParams} from '@angular/common/http';
+import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 
 
@@ -48,6 +49,15 @@ export class AppService {
 
       return this.http.post(`${this.url}/api/v1/users/login`, params);
     } // end of signin function
+
+    public logout(): Observable<any> {
+
+      const params = new HttpParams()
+        .set('authToken', Cookie.get('authtoken'))
+  
+      return this.http.post(`${this.url}/api/v1/users/logout`, params);
+  
+    } // end logout function  
 
     private handleError(err: HttpErrorResponse) {
 
