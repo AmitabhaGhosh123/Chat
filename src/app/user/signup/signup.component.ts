@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewContainerRef } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 import { AppService } from 'src/app/app.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -21,7 +23,7 @@ export class SignupComponent implements OnInit {
     private toastr: ToastrService,
     ) {
       
-    }
+    } // end constructor
 
   ngOnInit() {
 

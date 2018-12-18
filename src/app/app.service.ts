@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Cookie } from 'ng2-cookies/ng2-cookies';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/toPromise';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { HttpErrorResponse, HttpParams} from '@angular/common/http';
-import { Cookie } from 'ng2-cookies/ng2-cookies';
+
 
 
 
@@ -15,7 +16,9 @@ export class AppService {
 
   private url = 'https://chatapi.edwisor.com';
 
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient) {
+
+  } // end constructor
 
     public getUserInfofromLocalStorage = () => {
 

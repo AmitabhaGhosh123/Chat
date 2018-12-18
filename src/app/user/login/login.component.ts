@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef  } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { AppService } from 'src/app/app.service';
-import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
     private toastr: ToastrService,
     ) {
 
-      //this.toastr.setRootViewContainerRef(vcr);
-     }
+      
+     } // end constructor
 
   ngOnInit() {
   }

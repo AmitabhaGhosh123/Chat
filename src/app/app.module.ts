@@ -1,30 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { HttpClientModule} from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
 import { AppComponent } from './app.component';
-//import { ChatModule } from './chat/chat.module';
+
+//routing
+import { RouterModule, Routes } from '@angular/router';
 import { UserModule } from './user/user.module';
-import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './user/login/login.component';
 import { AppService } from './app.service';
+import { HttpClientModule} from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    UserModule,
-    FormsModule,
     ToastrModule.forRoot(),
+    UserModule,
+    HttpClientModule,    
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent, pathMatch: 'full'},
       {path: '', redirectTo: 'login', pathMatch: 'full'},
