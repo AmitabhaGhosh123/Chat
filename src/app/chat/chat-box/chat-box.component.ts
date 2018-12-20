@@ -43,9 +43,7 @@ export class ChatBoxComponent implements OnInit {
 
     this.verifyUserConfirmation();
 
-    this.getOnlineUserList()
-
-     
+    this.getOnlineUserList()   
 
   }
 
