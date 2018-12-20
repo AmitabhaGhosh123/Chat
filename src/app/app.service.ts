@@ -5,7 +5,7 @@ import { Cookie } from 'ng2-cookies/ng2-cookies';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/toPromise';
-import { HttpClient , HttpHeaders} from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { HttpErrorResponse, HttpParams} from '@angular/common/http';
 
 

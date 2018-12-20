@@ -4,7 +4,7 @@ import { AppService } from './../../app.service';
 
 import { Router } from '@angular/router';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
-import { ToastrService } from 'ngx-toastr';
+//import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-chat-box',
@@ -24,8 +24,8 @@ export class ChatBoxComponent implements OnInit {
 
   constructor(public AppService: AppService,
     public SocketService: SocketService,
-    public router: Router,
-    private toastr: ToastrService) {
+    public router: Router
+    ) {
 
       this.receiverId = Cookie.get('receiverId');
 
