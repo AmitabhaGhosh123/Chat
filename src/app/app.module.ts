@@ -11,6 +11,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChatBoxComponent } from './chat/chat-box/chat-box.component';
+import { ChatModule } from './chat/chat.module';
 
 
 
@@ -23,6 +24,7 @@ import { ChatBoxComponent } from './chat/chat-box/chat-box.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     UserModule,
+    ChatModule,
     HttpClientModule,    
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent, pathMatch: 'full'},
