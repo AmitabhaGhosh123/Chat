@@ -10,6 +10,7 @@ import { AppService } from './app.service';
 import { HttpClientModule} from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChatBoxComponent } from './chat/chat-box/chat-box.component';
 
 
 
@@ -27,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       {path: 'login', component: LoginComponent, pathMatch: 'full'},
       {path: '', redirectTo: 'login', pathMatch: 'full'},
       {path: '*', component: LoginComponent},
-      {path: '**', component: LoginComponent}
+      {path: '**', component: LoginComponent},
+      {path: 'chat', component: ChatBoxComponent, pathMatch: 'full'}
     ])
   ],
   providers: [AppService],

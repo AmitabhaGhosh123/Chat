@@ -73,7 +73,7 @@ export class ChatBoxComponent implements OnInit {
         this.disconnectedSocket = false;
 
         this.SocketService.setUser(this.authToken);
-        this.getOnlineUserList()
+        this.getOnlineUserList();
 
       });
     }

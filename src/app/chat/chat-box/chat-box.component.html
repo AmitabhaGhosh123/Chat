@@ -26,7 +26,7 @@
                 <li class="p-2 typeOfChats">
                   Online Users:
                 </li>
-                <li class="clearfix cursorPointer" [ngClass]="{'activeChat': user.chating == true}" 
+                <li class="clearfix cursorPointer" [ngClass]="{'activeChat': user.chatting == true}" 
                   *ngFor="let user of userList">
                   <div class="userPresence" *ngIf="user.userId != userInfo.userId">
                     {{user.name}}
@@ -58,7 +58,7 @@
           <li class="p-2 typeOfChats">
             Online Users:
           </li>
-          <li class="clearfix cursorPointer" [ngClass]="{'activeChat': user.chating == true}" 
+          <li class="clearfix cursorPointer" [ngClass]="{'activeChat': user.chatting == true}" 
             *ngFor="let user of userList">
             <div class="userPresence" *ngIf="user.userId != userInfo.userId">
   
