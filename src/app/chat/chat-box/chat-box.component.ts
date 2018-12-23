@@ -5,7 +5,7 @@ import { AppService } from './../../app.service';
 import { Router } from '@angular/router';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { ToastrService } from 'ngx-toastr';
-//import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-chat-box',
@@ -62,9 +62,9 @@ export class ChatBoxComponent implements OnInit {
     this.checkStatus();
 
     this.verifyUserConfirmation();
-    this.getOnlineUserList()
+    this.getOnlineUserList();
 
-    this.getMessageFromAUser()
+    this.getMessageFromAUser();
 
   }
 
@@ -83,7 +83,6 @@ export class ChatBoxComponent implements OnInit {
     }
 
   } // end checkStatus
-
 
 
   public verifyUserConfirmation: any = () => {
@@ -136,9 +135,7 @@ export class ChatBoxComponent implements OnInit {
       } else {
 
         this.messageList = previousData;
-        this.toastr.warning('No Messages available')
-
-       
+        this.toastr.warning('No Messages available')       
 
       }
 
@@ -147,7 +144,6 @@ export class ChatBoxComponent implements OnInit {
     }, (err) => {
 
       this.toastr.error('some error occured')
-
 
     });
 
@@ -182,7 +178,6 @@ export class ChatBoxComponent implements OnInit {
     Cookie.set('receiverId', id);
 
     Cookie.set('receiverName', name);
-
 
     this.receiverName = name;
 
@@ -228,9 +223,8 @@ export class ChatBoxComponent implements OnInit {
         createdOn: new Date()
       } // end chatMsgObject
       console.log(chatMsgObject);
-      this.SocketService.SendChatMessage(chatMsgObject)
-      this.pushToChatWindow(chatMsgObject)
-      
+      this.SocketService.SendChatMessage(chatMsgObject);
+      this.pushToChatWindow(chatMsgObject);      
 
     }
     else{
@@ -245,7 +239,6 @@ export class ChatBoxComponent implements OnInit {
     this.messageText="";
     this.messageList.push(data);
     this.scrollToChatTop = false;
-
 
   }// end push to chat window
 
@@ -290,8 +283,6 @@ export class ChatBoxComponent implements OnInit {
 
       }, (err) => {
         this.toastr.error('some error occured')
-
-
       });
 
   } // end logout

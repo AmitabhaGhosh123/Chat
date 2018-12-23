@@ -10,9 +10,7 @@ import 'rxjs/add/operator/toPromise';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HttpErrorResponse, HttpParams } from "@angular/common/http";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class SocketService {
 
   private url = 'https://chatapi.edwisor.com';

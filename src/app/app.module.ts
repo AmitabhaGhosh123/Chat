@@ -18,6 +18,7 @@ import { ChatModule } from './chat/chat.module';
 @NgModule({
   declarations: [
     AppComponent
+    //ChatBoxComponent
   ],
   imports: [
     BrowserModule,
