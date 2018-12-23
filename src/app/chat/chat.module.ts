@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChatBoxComponent } from './chat-box/chat-box.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { ToastrModule} from 'ngx-toastr';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { UserDetailsComponent } from '../shared/user-details/user-details/user-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { RemoveSpecialCharPipe } from '../shared/pipe/remove-special-char.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     RouterModule.forChild([ 
@@ -19,6 +22,6 @@ import { RemoveSpecialCharPipe } from '../shared/pipe/remove-special-char.pipe';
     ]),
     SharedModule
   ],
-  declarations: [ChatBoxComponent,RemoveSpecialCharPipe]
+  declarations: [ChatBoxComponent,RemoveSpecialCharPipe,UserDetailsComponent]
 })
 export class ChatModule { }
