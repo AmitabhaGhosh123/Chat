@@ -4,7 +4,6 @@ import { ChatBoxComponent } from './chat-box/chat-box.component';
 import { RouterModule } from '@angular/router';
 import { ToastrModule} from 'ngx-toastr';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { UserDetailsComponent } from '../shared/user-details/user-details/user-details.component';
 import { SharedModule } from '../shared/shared.module';
 import { RemoveSpecialCharPipe } from '../shared/pipe/remove-special-char.pipe';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +21,6 @@ import { FormsModule } from '@angular/forms';
     ]),
     SharedModule
   ],
-  declarations: [ChatBoxComponent,RemoveSpecialCharPipe,UserDetailsComponent]
+  declarations: [ChatBoxComponent,RemoveSpecialCharPipe]
 })
 export class ChatModule { }

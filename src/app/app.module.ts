@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 //routing
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { UserModule } from './user/user.module';
 import { LoginComponent } from './user/login/login.component';
 import { AppService } from './app.service';

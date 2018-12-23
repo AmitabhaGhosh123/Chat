@@ -5,10 +5,16 @@ import { FirstCharComponent } from './first-char/first-char/first-char.component
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [UserDetailsComponent, FirstCharComponent],
   imports: [
+    CommonModule
+  ],
+  declarations: [UserDetailsComponent,FirstCharComponent],
+  exports: [
+    UserDetailsComponent,
+    FirstCharComponent,
     CommonModule,
     FormsModule
   ]
+  
 })
 export class SharedModule { }
