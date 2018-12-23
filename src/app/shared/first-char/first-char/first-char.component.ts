@@ -1,4 +1,4 @@
-import { Component,OnChanges, Input, EventEmitter, Output, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, EventEmitter, Output, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-first-char',

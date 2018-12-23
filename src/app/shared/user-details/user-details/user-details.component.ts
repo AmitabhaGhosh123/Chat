@@ -1,4 +1,4 @@
-import { Component,OnChanges, Input, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user-details',
